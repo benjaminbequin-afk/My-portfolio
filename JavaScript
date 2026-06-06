@@ -1,0 +1,33 @@
+const connectButton = document.getElementById('cta-button');
+const contactInfo = document.getElementById('contact-info');
+
+connectButton.addEventListener('click', function() {
+    if (contactInfo.classList.contains('hidden')) {
+        contactInfo.classList.remove('hidden');
+        contactInfo.classList.add('show');
+        connectButton.textContent = "Close Contact Info";
+    } else {
+        contactInfo.classList.remove('show');
+        contactInfo.classList.add('hidden');
+        connectButton.textContent = "Click to Connect";
+    }
+});
+/* ==========================================================
+   INTERACTIVE CONTACT TOGGLE LOGIC
+   ========================================================== */
+
+// 1. Target the interactive elements from the HTML DOM
+const connectButton = document.getElementById('cta-button');
+const contactInfo = document.getElementById('contact-info');
+
+// 2. Add a listener to detect taps/clicks on the button
+connectButton.addEventListener('click', function() {
+    
+    // Check if the contact card is currently invisible
+    if (contactInfo.classList.contains('hidden')) {
+        // Reveal the info and change button text
+        contactInfo.classList.remove('hidden');
+        contactInfo.classList.add('show');
+        connectButton.textContent = "Close Contact Info";
+    } else {
+        // Hide the info again if clicked a second time
